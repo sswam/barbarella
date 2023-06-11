@@ -2,6 +2,8 @@
 
 set -a
 
+ALLEMANDE_GITHUB=git@github.com:sswam/allemande.git
+BARBARELLA_GITHUB=git@github.com:sswam/barbarella.git
 ALLEMANDE_ENV=$(realpath "${BASH_SOURCE[0]}")
 ALLEMANDE_HOME=$(dirname "$ALLEMANDE_ENV")
 ALLYCHAT_HOME="$ALLEMANDE_HOME/webchat"
@@ -28,7 +30,7 @@ fi
 
 PYTHON=$(which python3)
 
-for dir in python text www chat anthropic google llm scrape; do
+for dir in python text www chat anthropic google llm scrape tools; do
 	PYTHONPATH=${PYTHONPATH:-}:$ALLEMANDE_HOME/$dir
 done
 
